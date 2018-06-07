@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CarParking</string>
+    <string name="name">Name</string>
+    <string name="sunmit_button">sunmit button</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="enter_time">Enter time</string>
+    <string name="enter_your_car_number">Enter Your car number</string>
+    <string name="enter_your_name">Enter your name</string>
 </resources>

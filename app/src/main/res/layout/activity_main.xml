@@ -4,64 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/main"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:hint="@string/enter_your_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="11dp"
-            app:srcCompat="@drawable/button" />
+    <EditText
+        android:id="@+id/carnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/enter_your_car_number"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
-        <EditText
-            android:id="@+id/Name"
-            android:layout_width="250dp"
-            android:layout_height="57dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/phone"
-            android:layout_marginTop="84dp"
-            android:textColor="#FFF" />
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/enter_time"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carnumber" />
 
-        <EditText
-            android:id="@+id/Carnumber"
-            android:layout_width="208dp"
-            android:layout_height="53dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="186dp"
-            android:textColor="#FFF" />
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/enter_your_phone_number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:layout_constraintVertical_bias="0.722" />
 
-        <EditText
-            android:id="@+id/Time"
-            android:layout_width="272dp"
-            android:layout_height="53dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="231dp"
-            android:layout_marginEnd="10dp"
-            android:inputType="time"
-            android:textColor="#FFF" />
-
-        <EditText
-            android:id="@+id/phone"
-            android:layout_width="259dp"
-            android:layout_height="46dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="154dp"
-            android:layout_marginEnd="8dp"
-            android:inputType="number"
-            android:textColor="#FFF" />
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="116dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/sunmit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button" />
 
 </android.support.constraint.ConstraintLayout>
