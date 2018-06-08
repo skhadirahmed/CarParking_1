@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Parking" />
-        <activity android:name=".ThankU"></activity>
+        <activity android:name=".ThankU" />
     </application>
 
 </manifest>
