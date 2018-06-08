@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextView Name;
     TextView Carnumber;
-    TextView Time;
     TextView phone;
     ImageView submit;
     DataBaseHelper myDb;
@@ -27,23 +26,16 @@ public class MainActivity extends AppCompatActivity {
         myDb = new DataBaseHelper(this);
         Name = findViewById(R.id.name);
         Carnumber = findViewById(R.id.carnumber);
-        Time = findViewById(R.id.time);
         phone = findViewById(R.id.phone);
-        submit = findViewById(R.id.submit);
 
+    }
 
-        submit.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        if (Name.getText().toString().isEmpty() || Carnumber.getText().toString().isEmpty() || Time.getText().toString().isEmpty() || phone.getText().toString().isEmpty()) {
-                            Toast.makeText(MainActivity.this, "Please fill in all details", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Intent intent = new Intent(MainActivity.this, Parking.class);
-                            startActivity(intent);
-                        }
-
-                    }
-                }
-        );
+    public void gotopark(View view) {
+        if (Name.getText().toString().isEmpty() || Carnumber.getText().toString().isEmpty() || phone.getText().toString().isEmpty()) {
+            Toast.makeText(MainActivity.this, "Please fill in all details", Toast.LENGTH_SHORT).show();
+        } else {
+            Intent intent = new Intent(MainActivity.this, Parking.class);
+            startActivity(intent);
+        }
     }
 }
